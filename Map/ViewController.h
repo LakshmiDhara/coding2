@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
+#import "MyAnnotationView.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController   <MKMapViewDelegate ,CLLocationManagerDelegate ,MKAnnotation , UIGestureRecognizerDelegate>
+@property (nonatomic,strong) CLLocationManager *manager;
+@property (weak, nonatomic) IBOutlet MKMapView *mapView;
 
 
 @end
